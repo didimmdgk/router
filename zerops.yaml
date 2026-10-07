@@ -1,0 +1,8 @@
+zerops:
+  - setup: router
+    run:
+      base: ubuntu@latest
+      ports:
+        - port: 20128
+          httpSupport: true
+      start: docker run --rm -p 20128:20128 -e DATA_DIR=/app/data decolua/9router:latest
